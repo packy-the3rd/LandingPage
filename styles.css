@@ -1047,101 +1047,352 @@ ul {
     color: rgba(255, 255, 255, .6)
 }
 
-.roi-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    margin-bottom: 48px
+/* Chart Block */
+.roi-chart-block {
+    background: rgba(255, 255, 255, .97);
+    border-radius: var(--r);
+    padding: 40px 48px;
+    margin-bottom: 32px;
+    color: var(--text)
 }
 
-.roi-card {
-    background: rgba(255, 255, 255, .05);
-    border: 1px solid rgba(255, 255, 255, .08);
-    border-radius: var(--r);
-    padding: 32px 24px;
+.roi-chart-heading {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--text);
+    margin-bottom: 36px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #f0f0f0
+}
+
+.roi-chart-heading small {
+    font-size: .85rem;
+    font-weight: 500;
+    color: var(--text-light)
+}
+
+/* Time comparison: bar chart layout */
+.roi-chart-layout {
+    display: grid;
+    grid-template-columns: 140px auto 140px 1fr;
+    gap: 32px;
+    align-items: end;
+    min-height: 320px
+}
+
+.roi-bar-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end
+}
+
+.roi-bar-label {
+    font-size: .85rem;
+    font-weight: 700;
+    color: #b91c1c;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    background: #fef2f2;
+    padding: 4px 16px;
+    border-radius: 100px;
+    border: 1px solid #fecaca
+}
+
+.roi-bar-label-after {
+    color: var(--primary-dark) !important;
+    background: #fff8f0 !important;
+    border-color: #fed7aa !important
+}
+
+.roi-bar {
+    width: 120px;
+    border-radius: 12px 12px 4px 4px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, .08)
+}
+
+.roi-bar-before {
+    background: #e5e7eb
+}
+
+.roi-bar-after {
+    background: #e5e7eb
+}
+
+.roi-bar-segment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 6px;
+    color: var(--white);
+    font-size: .75rem;
+    font-weight: 600;
+    line-height: 1.4;
     text-align: center
 }
 
-.roi-before {
-    font-size: 1.13rem;
-    color: rgba(255, 255, 255, .5);
-    margin-bottom: 8px
+.roi-bar-segment span {
+    font-size: .7rem;
+    opacity: .9
 }
 
-.roi-before strong {
-    color: #ef4444;
-    font-size: 1.6rem
-}
-
-.roi-arrow {
-    font-size: 1.7rem;
-    color: var(--primary);
-    margin: 8px 0;
+.roi-bar-segment strong {
+    font-size: 1rem;
     font-weight: 900
 }
 
-.roi-after {
-    font-size: 1.13rem;
-    color: rgba(255, 255, 255, .8);
-    margin-bottom: 12px
+.seg-vital {
+    background: linear-gradient(180deg, #ef4444, #dc2626)
 }
 
-.roi-after strong {
-    color: var(--primary);
-    font-size: 1.6rem
+.seg-record {
+    background: linear-gradient(180deg, #f87171, #ef4444)
 }
 
-.roi-after .highlight {
-    font-size: 1.8rem
+.seg-vital-after {
+    background: linear-gradient(180deg, var(--primary), var(--primary-dark));
+    flex: 1
 }
 
-.roi-label {
-    font-size: .95rem;
-    color: rgba(255, 255, 255, .4);
-    border-top: 1px solid rgba(255, 255, 255, .08);
-    padding-top: 12px;
-    margin-top: 8px
+.roi-bar-total {
+    margin-top: 10px;
+    font-size: .85rem;
+    font-weight: 700;
+    color: #b91c1c
 }
 
-.roi-summary {
+.roi-bar-total-after {
+    color: var(--primary-dark) !important
+}
+
+/* Center badge */
+.roi-chart-center {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 48px;
-    background: rgba(230, 126, 34, .1);
-    border: 1px solid rgba(230, 126, 34, .2);
-    border-radius: var(--r);
-    padding: 40px
+    gap: 16px;
+    align-self: center
 }
 
-.roi-summary-item {
-    text-align: center
+.roi-reduction-badge {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), #F5B041);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 32px rgba(230, 126, 34, .3);
+    color: var(--white);
+    position: relative
 }
 
-.roi-summary-num {
-    font-size: 2.7rem;
+.roi-reduction-sub {
+    font-size: .75rem;
+    font-weight: 600;
+    opacity: .9;
+    letter-spacing: 1px
+}
+
+.roi-reduction-num {
+    font-size: 3rem;
     font-weight: 900;
-    color: var(--primary);
-    display: block;
-    line-height: 1.2
+    line-height: 1
 }
 
-.roi-summary-label {
-    font-size: 1rem;
-    color: rgba(255, 255, 255, .6);
-    margin-top: 8px;
-    display: block
+.roi-reduction-num small {
+    font-size: 1.4rem;
+    font-weight: 700
 }
 
-.roi-summary-label small {
-    font-size: .85rem;
+.roi-reduction-text {
+    font-size: 1.1rem;
+    font-weight: 900;
+    letter-spacing: 2px
+}
+
+.roi-chart-arrow {
     opacity: .6
 }
 
-.roi-summary-divider {
-    width: 1px;
-    height: 80px;
-    background: rgba(255, 255, 255, .1)
+/* Feature points */
+.roi-chart-features {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-self: center;
+    padding-left: 16px;
+    border-left: 3px solid rgba(230, 126, 34, .2)
+}
+
+.roi-feature-point {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px
+}
+
+.roi-fp-num {
+    flex-shrink: 0;
+    font-size: .8rem;
+    font-weight: 800;
+    color: var(--white);
+    background: var(--primary);
+    padding: 5px 14px;
+    border-radius: 100px;
+    letter-spacing: .5px;
+    margin-top: 3px
+}
+
+.roi-fp-text {
+    font-size: 1rem;
+    color: var(--text-light);
+    line-height: 1.7
+}
+
+.roi-fp-text strong {
+    color: var(--primary-dark);
+    font-weight: 800;
+    font-size: 1.1rem
+}
+
+/* Cost section within chart block */
+.roi-cost-divider {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #e5e7eb, transparent);
+    margin: 36px 0 28px
+}
+
+.roi-cost-heading {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--text);
+    margin-bottom: 20px
+}
+
+.roi-cost-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+}
+
+.roi-cost-bar-group {
+    display: flex;
+    align-items: center;
+    gap: 12px
+}
+
+.roi-cost-tag {
+    min-width: 64px;
+    text-align: center;
+    font-size: .75rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 100px
+}
+
+.roi-cost-tag-before {
+    color: #b91c1c;
+    background: #fef2f2;
+    border: 1px solid #fecaca
+}
+
+.roi-cost-tag-after {
+    color: var(--primary-dark);
+    background: #fff8f0;
+    border: 1px solid #fed7aa
+}
+
+.roi-cost-bar {
+    flex: 1;
+    height: 48px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: #f3f4f6;
+    overflow: hidden
+}
+
+.roi-cost-fill {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .75rem;
+    font-weight: 600;
+    color: var(--white)
+}
+
+.roi-cost-before .roi-cost-fill {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    border-radius: 8px 0 0 8px
+}
+
+.roi-cost-fill-license {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark)) !important;
+    border-radius: 8px 0 0 8px !important
+}
+
+.roi-cost-fill-op {
+    background: linear-gradient(135deg, #F5B041, #F0A050) !important
+}
+
+.roi-cost-amount {
+    position: absolute;
+    right: 16px;
+    font-size: .95rem;
+    color: var(--text);
+    font-weight: 500
+}
+
+.roi-cost-amount strong {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: var(--text)
+}
+
+.roi-cost-result {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 16px;
+    padding: 16px 24px;
+    background: linear-gradient(135deg, rgba(230, 126, 34, .06), rgba(245, 176, 65, .06));
+    border: 2px solid rgba(230, 126, 34, .15);
+    border-radius: 12px;
+    text-align: center;
+    flex-wrap: wrap
+}
+
+.roi-cost-result-label {
+    font-size: .8rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    letter-spacing: .5px
+}
+
+.roi-cost-result-num {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--primary);
+    line-height: 1.2
+}
+
+.roi-cost-result-num small {
+    font-size: .85rem;
+    font-weight: 700
+}
+
+.roi-cost-result-sub {
+    font-size: .8rem;
+    color: var(--text-light)
 }
 
 /* Pricing */
