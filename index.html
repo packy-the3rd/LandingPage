@@ -257,41 +257,104 @@
     <div class="container">
       <div class="text-center">
         <span class="section-label">ROI</span>
-        <h2 class="section-title fade-in">導入による投資対効果</h2>
-        <p class="section-desc fade-in">数字で見る、Vital DX rPPGの導入効果。</p>
+        <h2 class="section-title fade-in">導入したその月から、元が取れる。</h2>
+        <p class="section-desc fade-in">初期費用¥0。月額コストを上回る削減効果が、初月から生まれます。</p>
       </div>
-      <div class="roi-grid fade-in">
-        <div class="roi-card">
-          <div class="roi-before">1人あたり <strong>5分</strong></div>
-          <div class="roi-arrow">↓</div>
-          <div class="roi-after">わずか <strong class="highlight">10秒</strong></div>
-          <p class="roi-label">測定時間の短縮</p>
+
+      <div class="roi-chart-block fade-in">
+        <h3 class="roi-chart-heading">導入効果のメリット 〜工数・コスト削減〜 <small>（30名規模の施設の場合）</small></h3>
+
+        <!-- 棒グラフ + 削減バッジ + 効果ポイント -->
+        <div class="roi-chart-layout">
+          <div class="roi-bar-group">
+            <div class="roi-bar-label">導入前</div>
+            <div class="roi-bar roi-bar-before" style="height:260px">
+              <div class="roi-bar-segment seg-vital" style="flex:5">
+                <span>バイタル測定</span>
+                <strong>2時間</strong>
+              </div>
+              <div class="roi-bar-segment seg-record" style="flex:1.5">
+                <span>記録・入力</span>
+              </div>
+            </div>
+            <div class="roi-bar-total">計 約2.5時間</div>
+          </div>
+
+          <div class="roi-chart-center">
+            <div class="roi-reduction-badge">
+              <span class="roi-reduction-sub">業務時間</span>
+              <span class="roi-reduction-num"><span class="count-up" data-target="75">0</span><small>%</small></span>
+              <span class="roi-reduction-text">短縮!!</span>
+            </div>
+            <div class="roi-chart-arrow">
+              <svg width="80" height="24" viewBox="0 0 80 24">
+                <path d="M0 12h68l-8-8M68 12l-8 8" fill="none" stroke="var(--primary)" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="roi-bar-group">
+            <div class="roi-bar-label roi-bar-label-after">導入後</div>
+            <div class="roi-bar roi-bar-after" style="height:65px">
+              <div class="roi-bar-segment seg-vital-after">
+                <strong>30分</strong>
+              </div>
+            </div>
+            <div class="roi-bar-total roi-bar-total-after">計 約30分</div>
+          </div>
+
+          <div class="roi-chart-features">
+            <div class="roi-feature-point">
+              <span class="roi-fp-num">効果1</span>
+              <span class="roi-fp-text">1人あたりの測定時間<br><strong>5分 → わずか10秒</strong></span>
+            </div>
+            <div class="roi-feature-point">
+              <span class="roi-fp-num">効果2</span>
+              <span class="roi-fp-text">記録・入力作業を自動化<br><strong>手書き・転記が不要に</strong></span>
+            </div>
+            <div class="roi-feature-point">
+              <span class="roi-fp-num">効果3</span>
+              <span class="roi-fp-text">年間の削減時間<br><strong><span class="count-up"
+                    data-target="548">0</span>時間</strong>（1日90分×365日）</span>
+            </div>
+          </div>
         </div>
-        <div class="roi-card">
-          <div class="roi-before">午前中 <strong>2時間</strong></div>
-          <div class="roi-arrow">↓</div>
-          <div class="roi-after">たった <strong>30分</strong></div>
-          <p class="roi-label">全員の測定完了時間</p>
-        </div>
-        <div class="roi-card">
-          <div class="roi-before">年間 <strong>730時間</strong></div>
-          <div class="roi-arrow">↓</div>
-          <div class="roi-after">削減 <strong class="highlight"><span class="count-up"
-                data-target="548">0</span>時間</strong></div>
-          <p class="roi-label">年間削減時間（1日90分×365日）</p>
+
+        <!-- コスト比較（横棒グラフ） -->
+        <div class="roi-cost-divider"></div>
+        <h4 class="roi-cost-heading">💰 月額コストの比較</h4>
+        <div class="roi-cost-layout">
+          <div class="roi-cost-bar-group">
+            <div class="roi-cost-tag roi-cost-tag-before">導入前</div>
+            <div class="roi-cost-bar roi-cost-before">
+              <div class="roi-cost-fill" style="width:100%">
+                <span>人件費</span>
+              </div>
+              <div class="roi-cost-amount">月額 約<strong>91,000</strong>円</div>
+            </div>
+          </div>
+          <div class="roi-cost-bar-group">
+            <div class="roi-cost-tag roi-cost-tag-after">導入後</div>
+            <div class="roi-cost-bar roi-cost-after">
+              <div class="roi-cost-fill roi-cost-fill-license" style="width:47%">
+                <span>ライセンス</span>
+              </div>
+              <div class="roi-cost-fill roi-cost-fill-op" style="width:15%">
+                <span>運用</span>
+              </div>
+              <div class="roi-cost-amount">月額 約<strong>43,000</strong>円</div>
+            </div>
+          </div>
+          <div class="roi-cost-result">
+            <span class="roi-cost-result-label">毎月の削減額</span>
+            <span class="roi-cost-result-num">約<span class="count-up"
+                data-target="48">0</span>,000円<small>おトク</small></span>
+            <span class="roi-cost-result-sub">年間換算 約57万円の削減効果</span>
+          </div>
         </div>
       </div>
-      <div class="roi-summary fade-in">
-        <div class="roi-summary-item">
-          <span class="roi-summary-num">約 <span class="count-up" data-target="164">0</span> 万円</span>
-          <span class="roi-summary-label">年間人件費換算の削減額<br><small>※時給2,000円 × 548時間 × 1.5人</small></span>
-        </div>
-        <div class="roi-summary-divider"></div>
-        <div class="roi-summary-item">
-          <span class="roi-summary-num"><span class="count-up" data-target="6">0</span> ヶ月</span>
-          <span class="roi-summary-label">投資回収期間（目安）<br><small>※ベーシック版の場合</small></span>
-        </div>
-      </div>
+
     </div>
   </section>
 
@@ -430,7 +493,7 @@
           <div class="testimonial-author">
             <img src="images/t_nurse.png" alt="施設担当者" width="48" height="48">
             <div>
-              <div class="name">鹿児島県 介護病棟</div>
+              <div class="name">鹿児島県 介護医療院</div>
               <div class="role">150床 / 5ライセンス</div>
             </div>
           </div>
@@ -460,7 +523,7 @@
           <div class="testimonial-author">
             <img src="images/t_chief.png" alt="施設担当者" width="48" height="48">
             <div>
-              <div class="name">神奈川県 認知症病棟</div>
+              <div class="name">神奈川県 認知症治療病棟</div>
               <div class="role">180床 / 4ライセンス</div>
             </div>
           </div>
