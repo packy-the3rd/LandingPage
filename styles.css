@@ -1074,9 +1074,10 @@ ul {
 /* Time comparison: bar chart layout */
 .roi-chart-layout {
     display: grid;
-    grid-template-columns: 140px auto 140px 1fr;
+    grid-template-columns: 140px 160px 140px auto;
     gap: 32px;
     align-items: end;
+    justify-content: center;
     min-height: 320px
 }
 
@@ -1394,6 +1395,18 @@ ul {
     font-size: .8rem;
     color: var(--text-light)
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Pricing */
 .pricing-grid {
