@@ -615,8 +615,6 @@ ul {
     box-shadow: var(--shadow)
 }
 
-.feature-detail-content {}
-
 /* App flow: 2-step phone screenshots */
 .app-flow {
     display: flex;
