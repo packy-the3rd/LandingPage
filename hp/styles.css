@@ -344,11 +344,34 @@ ul {
     display: block
 }
 
+.price-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 4px;
+    white-space: nowrap
+}
+
 .hero-price .unit {
     font-size: .8rem;
     color: rgba(255, 255, 255, .5);
+    margin-top: 0;
+    white-space: nowrap
+}
+
+.price-note {
     display: block;
-    margin-top: 4px
+    font-size: .7rem;
+    color: rgba(255, 255, 255, .55);
+    margin-top: 6px;
+    font-weight: 400
+}
+
+.price-note-card {
+    font-size: .78rem;
+    color: var(--text-light);
+    margin-top: -4px;
+    margin-bottom: 16px
 }
 
 .hero-cta {
@@ -1623,4 +1646,3 @@ ul {
 
     .gantt-effects { flex-direction: column }
 }
-
