@@ -2169,11 +2169,11 @@ body {
 .campaign-badge {
     display: inline-flex;
     flex-direction: column;
-    gap: 6px;
-    padding: 20px 28px;
-    border-radius: 16px;
-    background: linear-gradient(135deg, rgba(218, 165, 32, .15), rgba(245, 200, 66, .1));
-    border: 2px solid rgba(218, 165, 32, .4);
+    gap: 10px;
+    padding: 16px 24px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(218, 165, 32, .12), rgba(245, 200, 66, .08));
+    border: 1.5px solid rgba(218, 165, 32, .35);
     margin-bottom: 28px;
     position: relative;
     overflow: hidden;
@@ -2201,25 +2201,46 @@ body {
     100% { transform: translateX(100%) rotate(45deg) }
 }
 
+.campaign-badge-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    flex-wrap: wrap
+}
+
 .campaign-badge-label {
-    font-size: .7rem;
+    font-size: .68rem;
     font-weight: 800;
-    letter-spacing: 2px;
-    color: #ffd700;
-    text-transform: uppercase;
-    position: relative
+    letter-spacing: 1px;
+    color: #1a0a00;
+    background: linear-gradient(135deg, #ffd700, #f5c842);
+    padding: 3px 10px;
+    border-radius: 100px;
+    white-space: nowrap;
+    flex-shrink: 0
 }
 
 .campaign-badge-text {
-    font-size: .95rem;
+    font-size: .88rem;
     color: rgba(255, 255, 255, .9);
-    line-height: 1.6;
+    line-height: 1.5;
     position: relative
 }
 
 .campaign-badge-text strong {
     color: #ffd700;
     font-weight: 800
+}
+
+.campaign-badge-bottom {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 8px;
+    position: relative;
+    padding-top: 8px;
+    border-top: 1px solid rgba(218, 165, 32, .2)
 }
 
 .campaign-badge-price {
@@ -2232,6 +2253,13 @@ body {
     color: #ffd700;
     font-size: 1.1rem;
     font-weight: 900
+}
+
+.campaign-badge-divider {
+    color: rgba(255, 255, 255, .35);
+    font-size: .8rem;
+    font-weight: 600;
+    position: relative
 }
 
 /* --- Pricing Card Campaign Styles --- */
@@ -2270,6 +2298,13 @@ body {
     gap: 4px
 }
 
+.campaign-price-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 4px
+}
+
 .price-original {
     font-size: 1.2rem;
     font-weight: 600;
@@ -2291,6 +2326,13 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 2px
+}
+
+.campaign-monthly-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 4px
 }
 
 .monthly-original {
@@ -2481,7 +2523,9 @@ body {
     }
 
     .campaign-price-highlight {
-        flex-direction: column
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center
     }
 
     .cta-cd-num {
