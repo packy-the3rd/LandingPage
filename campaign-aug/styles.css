@@ -2033,7 +2033,7 @@ ul {
 
 /* --- Body offset for fixed banner --- */
 body {
-    padding-top: 52px
+    padding-top: 62px
 }
 
 /* --- Campaign Banner (fixed top) --- */
@@ -2157,12 +2157,12 @@ body {
 
 /* Adjust header position for banner */
 .header {
-    top: 52px
+    top: 62px
 }
 
 /* Adjust hero padding */
 .hero {
-    padding-top: 152px
+    padding-top: 162px
 }
 
 /* --- Campaign Badge in Hero --- */
